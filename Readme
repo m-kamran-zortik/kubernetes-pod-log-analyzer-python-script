@@ -1,3 +1,4 @@
+```markdown
 # Kubernetes Pod Log Analyzer
 
 This repository contains a Python script for analyzing Kubernetes pod logs. It helps in extracting log data from specific pods based on labels, checks for container restarts, flags error messages, and saves the results in a log file.
@@ -88,8 +89,4 @@ This will analyze all pods in the `my-namespace` namespace with the label `app=m
 2024-12-19 12:35:01 - Pod: my-pod, Container: my-container - Error: Connection refused
 2024-12-19 12:35:05 - Flagged: Error: Connection refused
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
