@@ -1,4 +1,3 @@
-```markdown
 # Kubernetes Pod Log Analyzer
 
 This repository contains a Python script for analyzing Kubernetes pod logs. It helps in extracting log data from specific pods based on labels, checks for container restarts, flags error messages, and saves the results in a log file.
@@ -18,7 +17,7 @@ Before running the script, ensure the following:
 - **A running Kubernetes cluster**. You can use any of the following options:
   - **Minikube**: A local Kubernetes cluster setup tool.
   - **Kubeadm**: A tool for managing a Kubernetes cluster, typically used for setting up production environments.
-
+  
   If you don't have a Kubernetes cluster running, you can set up Minikube or Kubeadm. Minikube is a great option for a local cluster for testing purposes.
 
   - **Minikube setup**: [Install Minikube](https://minikube.sigs.k8s.io/docs/)
