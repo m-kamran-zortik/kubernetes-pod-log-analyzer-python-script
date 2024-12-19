@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-failed
+  labels:
+    app: my-app
+  namespace: default
+spec:
+  containers:
+    - name: my-app-container
+      image: busybox
+      command: ["sh", "-c", "exit 1"]  # This will force the pod to fail immediately
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-crashloopbackoff
+  labels:
+    app: my-app
+  namespace: default
+spec:
+  containers:
+    - name: my-app-container
+      image: busybox
+      command: ["sh", "-c", "while true; do echo 'CrashLoop'; sleep 1; done"]  # Simulating crash loop
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-error
+  labels:
+    app: my-app
+  namespace: default
+spec:
+  containers:
+    - name: my-app-container
+      image: busybox
+      command: ["sh", "-c", "exit 2"]  # This will simulate an error state
